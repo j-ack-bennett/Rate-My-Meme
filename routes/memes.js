@@ -27,7 +27,13 @@ router.get("/edgy", (req, res) => {
 })
 
 router.get("/r18", (req, res) => {
-  res.send("r18 memes")
+  db.getAllMemes()
+  .then(memes => {
+    res.render('rrated', {memes: memes})
+  })
+  .catch(err => {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
 })
 
 router.get("/:id", (req, res) => {

@@ -9,3 +9,4 @@ module.exports = {
 function getAllMemes (db = connection) {
   return db('memes').select()
 }
+

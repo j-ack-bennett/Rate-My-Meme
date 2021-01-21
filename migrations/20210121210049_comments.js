@@ -4,7 +4,7 @@ exports.up = (knex, Promise) => {
       table.integer('meme_id')
       table.string('comment')
       table.string('submitted_by')
-      table.string('rating')
+      table.integer('rating')
     })
   }
   
