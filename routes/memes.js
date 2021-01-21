@@ -52,7 +52,15 @@ router.get("/r18", (req, res) => {
 })
 
 router.get("/:id", (req, res) => {
-  res.render("viewMeme", {})
+  let id = req.params.id
+  db.getMeme(id)
+    .then(meme => {
+      //console.log(meme)
+      res.render('viewMeme', {meme : meme})
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 })
 
 
