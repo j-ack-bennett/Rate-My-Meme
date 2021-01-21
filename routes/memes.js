@@ -52,7 +52,7 @@ router.get("/r18", (req, res) => {
 })
 
 router.get("/:id", (req, res) => {
-  res.send("add comment stuff here")
+  res.render("viewMeme", {})
 })
 
 
