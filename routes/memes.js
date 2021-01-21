@@ -5,17 +5,17 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  db.getAllMemes()
-    .then(memes => {
-      res.render('index', {memes: memes})
-    })
-    .catch(err => {
-      res.status(500).send('DATABASE ERROR: ' + err.message)
-    })
+  res.render("index", {})
 })
 
 router.get("/all", (req, res) => {
-  res.send("all memes")
+  db.getAllMemes()
+  .then(memes => {
+    res.render('all', {memes: memes})
+  })
+  .catch(err => {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
 })
 
 router.get("/dank", (req, res) => {
