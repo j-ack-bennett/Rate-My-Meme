@@ -5,7 +5,8 @@ const connection = require('knex')(config)
 module.exports = {
   getAllMemes,
   getCertainMemes,
-  getMeme
+  getMeme,
+  addComment
 }
 
 function getAllMemes (db = connection) {
@@ -23,5 +24,11 @@ function getMeme (id, db = connection) {
   return db('memes')
   .where('id', id)
   .first()
+}
+
+function addComment (meme_id, submitted_by, comment, rating, db = connection)
+{
+  return db('comments')
+  .insert({meme_id : meme_id, submitted_by : submitted_by, comment : comment, rating : rating})
 }
 
