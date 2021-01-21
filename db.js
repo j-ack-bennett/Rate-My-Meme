@@ -4,7 +4,8 @@ const connection = require('knex')(config)
 
 module.exports = {
   getAllMemes,
-  getCertainMemes
+  getCertainMemes,
+  getMeme
 }
 
 function getAllMemes (db = connection) {
@@ -16,5 +17,11 @@ function getCertainMemes (category, db = connection) {
   .join('categories', 'categories.id', 'memes.category_id')
   .where('category', category)
   .select('*', 'memes.id AS id').debug()
+}
+
+function getMeme (id, db = connection) {
+  return db('memes')
+  .where('id', id)
+  .first()
 }
 
