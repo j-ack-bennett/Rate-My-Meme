@@ -19,17 +19,32 @@ router.get("/all", (req, res) => {
 })
 
 router.get("/dank", (req, res) => {
-  res.send("dank memes")
+  db.getCertainMemes('dank')
+    .then(dankMemes => {
+      //console.log("dank memes", dankMemes)
+      res.render("dank", {dankMemes : dankMemes})
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 })
 
 router.get("/edgy", (req, res) => {
-  res.send("edgy memes")
+  db.getCertainMemes('edgy')
+    .then(edgyMemes => {
+      //console.log("edgy memes", edgyMemes)
+      res.render("edgy", {edgyMemes : edgyMemes})
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 })
 
 router.get("/r18", (req, res) => {
-  db.getAllMemes()
-  .then(memes => {
-    res.render('rrated', {memes: memes})
+  db.getCertainMemes('r18')
+  .then(r18Memes => {
+    //console.log("r18", r18Memes)
+    res.render('rrated', {r18Memes: r18Memes})
   })
   .catch(err => {
     res.status(500).send('DATABASE ERROR: ' + err.message)
@@ -39,5 +54,6 @@ router.get("/r18", (req, res) => {
 router.get("/:id", (req, res) => {
   res.render("viewMeme", {})
 })
+
 
 module.exports = router

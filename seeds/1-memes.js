@@ -12,5 +12,11 @@ exports.seed = function (knex, Promise) {
     {id: 10, url: "/po.jpg", submitted_by: "lara", category_id: 2},
     {id: 11, url: "/rosesarered.jpg", submitted_by: "lara", category_id: 2},
     {id: 12, url: "/weightedblanket.jpg", submitted_by: "lara", category_id: 2},
+    {id: 13, url: "/clown.jpg", submitted_by: "lukas", category_id: 1},
+    {id: 14, url: "/duck.jpg", submitted_by: "lukas", category_id: 1},
+    {id: 15, url: "/god.jpg", submitted_by: "lukas", category_id: 1},
+    {id: 16, url: "/knowledge.jpg", submitted_by: "lukas", category_id: 1},
+    {id: 17, url: "/liar.jpg", submitted_by: "lukas", category_id: 1},
+    {id: 18, url: "/self-medicate.jpg", submitted_by: "lukas", category_id: 1},
   ])
 }
