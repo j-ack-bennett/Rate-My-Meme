@@ -6,7 +6,8 @@ module.exports = {
   getAllMemes,
   getCertainMemes,
   getMeme,
-  addComment
+  addComment,
+  getComments
 }
 
 function getAllMemes (db = connection) {
@@ -32,3 +33,9 @@ function addComment (meme_id, submitted_by, comment, rating, db = connection)
   .insert({meme_id : meme_id, submitted_by : submitted_by, comment : comment, rating : rating})
 }
 
+function getComments (id, db = connection) {
+  return db('memes')
+  .join('comments', 'comments.meme_id', "meme_id")
+  .where('memes.id', id)
+  .select("*", "comments.id AS id", "memes.id AS meme_id")
+}
