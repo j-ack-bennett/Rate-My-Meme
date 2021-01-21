@@ -3,7 +3,7 @@ exports.up = (knex, Promise) => {
     table.increments('id').primary()
     table.string('url')
     table.string('submitted_by')
-    table.string('category_id')
+    table.integer('category_id')
   })
 }
 
