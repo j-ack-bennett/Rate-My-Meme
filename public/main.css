@@ -12,10 +12,6 @@
   font-style: normal;
 }
 
-* {
-  font-family: 'CallOfOpsDuty';
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -29,17 +25,40 @@ a {
 
 .container {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
   flex-wrap: wrap;
 }
 
 .container .image {
-  width: 50%;
+  min-width: 40%;
+  max-width: 40%;
 }
 
 .container img {
-  width: calc(100% - (20px * 2));
+  width: calc(100% - (40px * 2));
   margin: 20px;
   opacity: 0.5;
+}
+
+.container-text {
+  position: relative;
+  text-align: center;
+  font-size: 700%;
+}
+
+.centered-text {
+  /* color: white; */
+  font-family: 'CallOfOpsDuty';
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red); 
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .wrap {
