@@ -1,5 +1,8 @@
-<ul>
-  {{#each memes}}
-  <a href="/{{id}}">li><img src="{{url}}"></li></a>
-  {{/each}}
-</ul>
+{{#each memes}}
+<div class="box">
+  <div class="boxInner">
+    <a href="/{{id}}"><img src="{{url}}" /></a>
+    <div class="titleBox">{{submitted_by}}</div>
+  </div>
+</div>
+{{/each}}
