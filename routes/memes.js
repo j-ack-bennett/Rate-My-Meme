@@ -63,5 +63,19 @@ router.get("/:id", (req, res) => {
     })
 })
 
+router.post("/:id", (req, res) => {
+  let meme_id = req.params.id
+  let submitted_by = req.body.name
+  let comment = req.body.comment
+  let rating = req.body.rating
+  db.addComment(meme_id, submitted_by, comment, rating)
+    .then(() => {
+      res.redirect(`/${meme_id}`)
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
+
 
 module.exports = router
