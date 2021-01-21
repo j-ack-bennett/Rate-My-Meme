@@ -50,7 +50,6 @@ a {
 }
 
 .centered-text {
-  /* color: white; */
   font-family: 'CallOfOpsDuty';
   background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red); 
   -webkit-background-clip: text;
