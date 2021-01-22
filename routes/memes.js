@@ -59,12 +59,19 @@ router.post("/addmeme", (req, res) => {
   let url = req.body.url
   let name = req.body.name
   let category_id = req.body.cats
+  console.log(req.body.cats)
 
   console.log(url, name, category_id)
   db.addMeme(url, name, category_id)
-  .then(
-    res.redirect('/')
-  )
+  .then(() => {
+    if(category_id == 1){
+      res.redirect('/dank')
+    } else if(category_id == 2){
+      res.redirect('/edgy')
+    } else {
+      res.redirect('/r18')
+    }
+  })
 })
 
 router.get("/:id", (req, res) => {
