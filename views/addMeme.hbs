@@ -1,3 +1,6 @@
+<h1>Add a Meme</h1>
+
+
 <form class="form" action="/addmeme" method="post">
   <label for="name" class="form-item">
     Name:
@@ -5,11 +8,11 @@
   </label>
   <label for="url" class="form-item">
     Url:
-    <input type="text" name="url" >
+    <input type="text" name="url" required>
   </label>  
 
   <label for="rating" class="form-item">
-    <input type="radio" id="dank1" name="cats" value="1" /><label for="dank" title="Dank">Dank</label>
+    <input type="radio" id="dank1" name="cats" value="1" required/><label for="dank" title="Dank">Dank</label>
     <input type="radio" id="edgy2" name="cats" value="2" /><label for="edgy" title="Edgy">Edgy</label>
     <input type="radio" id="r183" name="cats" value="3" /><label for="r18" title="r18">R18</label>
   </label> 
