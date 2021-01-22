@@ -21,7 +21,6 @@ router.get("/all", (req, res) => {
 router.get("/dank", (req, res) => {
   db.getCertainMemes('dank')
     .then(dankMemes => {
-      //console.log("dank memes", dankMemes)
       res.render("dank", {dankMemes : dankMemes})
     })
     .catch(err => {
@@ -32,7 +31,6 @@ router.get("/dank", (req, res) => {
 router.get("/edgy", (req, res) => {
   db.getCertainMemes('edgy')
     .then(edgyMemes => {
-      //console.log("edgy memes", edgyMemes)
       res.render("edgy", {edgyMemes : edgyMemes})
     })
     .catch(err => {
@@ -43,7 +41,6 @@ router.get("/edgy", (req, res) => {
 router.get("/r18", (req, res) => {
   db.getCertainMemes('r18')
   .then(r18Memes => {
-    //console.log("r18", r18Memes)
     res.render('rrated', {r18Memes: r18Memes})
   })
   .catch(err => {
@@ -59,9 +56,6 @@ router.post("/addmeme", (req, res) => {
   let url = req.body.url
   let name = req.body.name
   let category_id = req.body.cats
-  console.log(req.body.cats)
-
-  console.log(url, name, category_id)
   db.addMeme(url, name, category_id)
   .then(() => {
     if(category_id == 1){
@@ -80,7 +74,6 @@ router.get("/:id", (req, res) => {
     .then(meme => {
       db.getComments(id)
         .then(comments => {
-          console.log(comments)
           let viewData = {
             meme : meme,
             comments : comments

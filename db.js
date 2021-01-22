@@ -19,7 +19,7 @@ function getCertainMemes (category, db = connection) {
   return db('memes')
   .join('categories', 'categories.id', 'memes.category_id')
   .where('category', category)
-  .select('*', 'memes.id AS id').debug()
+  .select('*', 'memes.id AS id')
 }
 
 function getMeme (id, db = connection) {

@@ -178,6 +178,7 @@ a {
   display: inline-block;
   background-color: white;
   font-family: Verdana, Tahoma, sans-serif;
+  padding: 15px;
 }
 
 .box {
