@@ -30,7 +30,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'migrations'
       // tableName: '20160802144759_memes',
       // tableName: '20210121205758_categories',
       // tableName: '20210121210049_comments'
