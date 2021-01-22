@@ -51,6 +51,22 @@ router.get("/r18", (req, res) => {
   })
 })
 
+router.get("/addmeme", (req, res) => {
+  res.render("addMeme", {})
+})
+
+router.post("/addmeme", (req, res) => {
+  let url = req.body.url
+  let name = req.body.name
+  let category_id = req.body.cats
+
+  console.log(url, name, category_id)
+  db.addMeme(url, name, category_id)
+  .then(
+    res.redirect('/')
+  )
+})
+
 router.get("/:id", (req, res) => {
   let id = req.params.id
   db.getMeme(id)
@@ -82,6 +98,8 @@ router.post("/:id", (req, res) => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
+
+
 
 
 module.exports = router
