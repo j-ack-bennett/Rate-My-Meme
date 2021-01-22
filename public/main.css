@@ -38,6 +38,10 @@ body.add {
   background-image: url('https://www.kolpaper.com/wp-content/uploads/2020/10/Meme-Wallpaper-Desktop.jpg');
 }
 
+body .view {
+  background-image: url('https://lh3.googleusercontent.com/proxy/uQRiXlfUTWLnTbGxOkp0Tazy-_Hi4_gufBUsMGhfd_e6NoIBWAR3fhG_mJJ0eOt0Hd9LJb-Noeum6TEXV9je9Wwm04mD3oSYH8EWQnoQxDZVTu_Z7bHCE7r-8pkx_FVPBH_pBw');
+}
+
 h1 {
   font-family: 'CallOfOpsDuty';
   font-size: 150px;
