@@ -1,20 +1,29 @@
-<h1>Add a Meme</h1>
+<body class="add">
+<h2 class="addMeme">Add a Meme</h2>
 
+<div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+  <div class="form-item">
+    <form class="form" action="/addmeme" method="post">
+      <label for="name" class="form-item">
+        Name:
+        <input type="text" name="name" >
+      </label>
+      <label for="url" class="form-item">
+        Url:
+        <input type="text" name="url" required>
+      </label>  
 
-<form class="form" action="/addmeme" method="post">
-  <label for="name" class="form-item">
-    Name:
-    <input type="text" name="name" >
-  </label>
-  <label for="url" class="form-item">
-    Url:
-    <input type="text" name="url" required>
-  </label>  
+      <label for="rating" class="form-item">
+        <input type="radio" id="dank1" name="cats" value="1" required/><label for="dank" title="Dank">Dank</label>
+        <input type="radio" id="edgy2" name="cats" value="2" /><label for="edgy" title="Edgy">Edgy</label>
+        <input type="radio" id="r183" name="cats" value="3" /><label for="r18" title="r18">R18</label>
+      </label> 
+      <input type="submit" name="" value="Submit">
+    </form>
+  </div>
+</div>
 
-  <label for="rating" class="form-item">
-    <input type="radio" id="dank1" name="cats" value="1" required/><label for="dank" title="Dank">Dank</label>
-    <input type="radio" id="edgy2" name="cats" value="2" /><label for="edgy" title="Edgy">Edgy</label>
-    <input type="radio" id="r183" name="cats" value="3" /><label for="r18" title="r18">R18</label>
-  </label> 
-  <input type="submit" name="" value="Submit">
-</form>
+<div class="addMemeImg">
+  <img style="margin-bottom: 20px; margin-top: 100px;" src="https://static2.srcdn.com/wordpress/wp-content/uploads/2020/03/michael-scott-the-office-memes.jpg?q=50&fit=crop&w=960&h=500">
+</div>
+</body>
