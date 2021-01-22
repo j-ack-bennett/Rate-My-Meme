@@ -18,6 +18,22 @@ body {
   background-image: url('https://vignette.wikia.nocookie.net/dogeshibe/images/5/50/Wiki-background/revision/latest?cb=20180520063125');
 }
 
+body.all {
+  background-image: url();
+}
+
+body.dank {
+  background-image: url();
+}
+
+body.edgy {
+  background-image: url();
+}
+
+body.rrated {
+  background-image: url();
+}
+
 h1 {
   font-family: 'CallOfOpsDuty';
   font-size: 150px;
