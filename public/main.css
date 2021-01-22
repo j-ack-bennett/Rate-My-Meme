@@ -19,25 +19,73 @@ body {
 }
 
 body.all {
-  background-image: url();
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/861740565659795979/E651496A44DCD189120C7A17D05055C891D67741/');
 }
 
 body.dank {
-  background-image: url();
+  background-image: url('https://wallpaperaccess.com/full/2291207.jpg');
 }
 
 body.edgy {
-  background-image: url();
+  background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/4/15/scW3jK.png');
 }
 
 body.rrated {
-  background-image: url();
+  background-image: url('https://media.giphy.com/media/3osxAKYM7Wx8sji9LY/giphy.gif');
 }
 
 h1 {
   font-family: 'CallOfOpsDuty';
   font-size: 150px;
   text-align: center;
+}
+
+h2.all {
+  font-family: "CallOfOpsDuty";
+  font-size: 120px;
+  text-align: center;
+  color: yellow;
+  text-decoration: underline;
+  -webkit-text-stroke: 2px black;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+}
+
+h2.dank {
+  font-family: "CallOfOpsDuty";
+  font-size: 120px;
+  text-align: center;
+  color: green;
+  text-decoration: underline;
+  -webkit-text-stroke: 2px black;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+}
+
+h2.edgy {
+  margin-top: 0;
+  margin-bottom: 100px;
+  font-family: "CallOfOpsDuty";
+  font-size: 120px;
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+  -webkit-text-stroke: 2px black;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+}
+
+h2.rrated {
+  margin-top: 0;
+  margin-bottom: 100px;
+  font-family: "CallOfOpsDuty";
+  font-size: 120px;
+  text-align: center;
+  color: pink;
+  text-decoration: underline;
+  -webkit-text-stroke: 2px black;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
 }
 
 a {
@@ -90,6 +138,18 @@ a {
   margin: 10px;
 }
 
+.comment {
+  text-align: center;
+  background-color: white;
+}
+
+.form-item {
+  text-align: center;
+  display: inline-block;
+  background-color: white;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
 .box {
   float: left;
   position: relative;
@@ -125,6 +185,20 @@ a {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+.addMemeImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.borderLine {
+  border: 0 none #ccc;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
 }
 
 body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
