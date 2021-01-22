@@ -80,6 +80,7 @@ router.get("/:id", (req, res) => {
     .then(meme => {
       db.getComments(id)
         .then(comments => {
+          console.log(comments)
           let viewData = {
             meme : meme,
             comments : comments

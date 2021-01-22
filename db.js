@@ -35,10 +35,11 @@ function addComment (meme_id, submitted_by, comment, rating, db = connection)
 }
 
 function getComments (id, db = connection) {
-  return db('memes')
-  .join('comments', 'comments.meme_id', "meme_id")
-  .where('memes.id', id)
-  .select("*", "comments.id AS id", "memes.id AS meme_id")
+  return db('comments')
+  .where('meme_id', id)
+  // .join('comments', 'comments.meme_id', "meme_id")
+  // .where('comments.meme_id', id)
+  // .select("*", "comments.id AS id", "memes.id AS meme_id")
 }
 
 function addMeme (url, submitted_by, category_id, db = connection) {
