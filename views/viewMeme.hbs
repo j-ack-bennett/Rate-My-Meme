@@ -1,34 +1,38 @@
-<div class="wrap">
-  <div class="box">
-    <div class="boxInner">
-      <img src="{{meme.url}}" />
-      <div class="titleBox">{{meme.submitted_by}}</div>
-    </div>
+<div class="addMemeImg">
+  <img src="{{meme.url}}" />
+  <div class="titleBox">{{meme.submitted_by}}</div>
+</div>
+
+<div class="container" style="margin-top: 10px;">
+  <div class="comment">
+  <form action="/{{meme.id}}" method="post">
+    <label for="name" class="form-item">
+      Name:
+      <input type="text" name="name" required>
+    </label>
+    <label for="comment" class="form-item">
+      Comment:
+      <input type="text" name="comment" required >
+    </label>  
+    <label for="rating">
+      <input type="radio" id="star1" name="rating" value="1" required /><label for="star1" title="Sucks big time">1 star</label>
+      <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+      <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+      <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+      <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+    </label> 
+    <input type="submit" name="" value="Submit">
+  </form>
   </div>
 </div>
 
-<form class="form" action="/{{meme.id}}" method="post">
-  <label for="name" class="form-item">
-    Name:
-    <input type="text" name="name" >
-  </label>
-  <label for="comment" class="form-item">
-    Comment:
-    <input type="text" name="comment" required>
-  </label>  
-  <label for="rating" class="form-item">
-    <input type="radio" id="star1" name="rating" value="1" required/><label for="star1" title="Sucks big time">1 star</label>
-    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-  </label> 
-  <input type="submit" name="" value="Submit">
-</form>
-
-
-{{#each comments}}
-  <p>{{comment}}</p>
-  <p>Name: {{submitted_by}}</p>
-  <p>Rating: {{rating}}</p>
-{{/each}}
+<div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+  <div class="form-item">
+    {{#each comments}}
+      <p>{{comment}}</p>
+      <p>Name: {{submitted_by}}</p>
+      <p>Rating: {{rating}}</p>
+      <div class="borderLine"></div>
+    {{/each}}
+  </div>
+</div>
