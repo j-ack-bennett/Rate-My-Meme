@@ -1,15 +1,17 @@
-# Boilerplate: Knex.js
+# Rate-My-Meme
 
-Phase 1 boilerplate project with:
+A group project created during my time at Enspiral Dev Academy, which incorporates the following technologies:
 
  - Express
  - Knex
  - SQLite3
  - Express Handlebars
  - body-parser
- - Jest
  - nodemon
 
+This had a heavy focus on back end tech, with a major use of Knex, Express and SQLite.
+
+At this stage of our EDA bootcamp, we were looking into older tech which is why Express Handlebars was used in this case.
 
 ## Install
 
@@ -19,6 +21,3 @@ npx knex migrate:latest
 npx knex seed:run
 npm run dev
 ```
-
-Be sure to check out the other npm scripts too.
-
