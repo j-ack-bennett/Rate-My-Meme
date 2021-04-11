@@ -28,7 +28,7 @@
     "knex": "^0.19.5",
     "nodemon": "^2.0.2",
     "pg": "^8.5.1",
-    "sqlite3": "^4.2.0"
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
     "cheerio": "1.0.0-rc.3",
